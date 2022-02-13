@@ -283,6 +283,7 @@ int main(int argc, char** argv)
         &pi
     );
     WaitForSingleObject(pi.hProcess, INFINITE);
+    CloseHandle(pi.hThread);
     Sleep(10000);
     if (bRestore)
     {
